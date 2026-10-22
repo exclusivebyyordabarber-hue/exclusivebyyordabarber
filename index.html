@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Exclusive by Yordabarber | Premium Grooming in Boston</title>
+<meta name="description" content="Exclusive by Yordabarber — private premium barbering and grooming studio at Sola Salons #33 in Boston. Haircuts, beard grooming and facial services.">
+<style>
+:root{--bg:#06120d;--bg2:#0b1d15;--gold:#d9ad4c;--gold2:#f3d27a;--cream:#f7f1df;--muted:#c9c3b3;--line:rgba(217,173,76,.45)}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:radial-gradient(circle at top,#173325 0,#06120d 42%,#030907 100%);color:var(--cream);font-family:Georgia,"Times New Roman",serif} a{color:inherit;text-decoration:none}
+.topbar{background:#050c09;border-bottom:1px solid var(--line);padding:10px 18px;text-align:center;font-family:Arial,sans-serif;font-size:13px;letter-spacing:2px;color:var(--gold2)}
+nav{position:sticky;top:0;z-index:20;background:rgba(3,9,7,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1180px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 18px;gap:20px}
+.nav-logo{height:72px;width:auto;object-fit:contain} .navlinks{display:flex;gap:22px;font-family:Arial,sans-serif;font-size:13px;letter-spacing:1px;text-transform:uppercase} .navlinks a:hover{color:var(--gold2)}
+.btn{display:inline-block;border:1px solid var(--gold);border-radius:5px;padding:13px 20px;background:linear-gradient(135deg,#162a20,#09120e);color:#fff;font-family:Arial,sans-serif;font-weight:700;letter-spacing:1px;text-transform:uppercase;box-shadow:0 0 20px rgba(217,173,76,.12)}
+.btn:hover{background:#1b3527}
+.hero{max-width:1180px;margin:auto;padding:62px 18px 50px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:44px}
+.hero-logo{width:min(100%,620px);display:block;margin-bottom:22px;border-radius:10px;filter:drop-shadow(0 14px 35px rgba(0,0,0,.55))}
+.kicker{font-family:Arial,sans-serif;letter-spacing:4px;color:var(--gold2);font-size:13px;text-transform:uppercase}
+h1{font-size:clamp(42px,6vw,76px);line-height:.95;margin:14px 0 20px;letter-spacing:1px}
+.hero p{font-family:Arial,sans-serif;line-height:1.75;color:var(--muted);font-size:17px;max-width:650px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+.hero-panel{border:1px solid var(--line);border-radius:16px;padding:28px;background:linear-gradient(145deg,rgba(19,43,31,.88),rgba(3,10,7,.9));box-shadow:0 25px 60px rgba(0,0,0,.3)}
+.hero-panel h2{font-size:28px;margin:0 0 10px;color:var(--gold2)} .hero-panel p{font-size:15px}
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.info div{background:#07130e;padding:25px;text-align:center} .info strong{display:block;color:var(--gold2);font-size:17px;margin-bottom:6px} .info span{font-family:Arial,sans-serif;color:var(--muted);font-size:14px;line-height:1.5}
+section{max-width:1180px;margin:auto;padding:70px 18px} .section-head{text-align:center;max-width:780px;margin:0 auto 36px} .section-head .kicker{margin-bottom:10px} .section-head h2{font-size:42px;margin:0 0 12px} .section-head p{font-family:Arial,sans-serif;color:var(--muted);line-height:1.7}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.service-card{background:linear-gradient(180deg,#0c2117,#06110d);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 15px 35px rgba(0,0,0,.22);display:flex;flex-direction:column}
+.service-card img{width:100%;aspect-ratio:1.42/1;object-fit:cover;display:block}
+.service-body{padding:20px;display:flex;flex-direction:column;flex:1} .service-title{display:flex;justify-content:space-between;gap:12px;align-items:flex-start} .service-title h3{font-size:22px;margin:0;color:#fff} .service-title span{color:var(--gold2);font-size:21px;white-space:nowrap} .service-body p{font-family:Arial,sans-serif;color:var(--muted);line-height:1.55;font-size:14px;flex:1}
+.small-btn{align-self:flex-start;border:1px solid var(--gold);border-radius:30px;padding:10px 16px;color:var(--gold2);font:700 11px Arial,sans-serif;letter-spacing:1px;margin-top:7px}
+.about{background:linear-gradient(135deg,#0d2419,#06100c);border-top:1px solid var(--line);border-bottom:1px solid var(--line)} .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center} .about h2{font-size:44px;margin:0 0 16px} .about p{font-family:Arial,sans-serif;color:var(--muted);line-height:1.8} .feature{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:22px} .feature div{border:1px solid var(--line);padding:17px;border-radius:8px} .feature strong{display:block;color:var(--gold2);margin-bottom:5px} .feature span{font:13px Arial;color:var(--muted)}
+.booking{text-align:center} .booking-box{border:1px solid var(--gold);border-radius:16px;padding:45px 25px;background:radial-gradient(circle at center,rgba(36,70,50,.65),rgba(4,12,8,.95));box-shadow:0 0 50px rgba(217,173,76,.08)} .booking-box h2{font-size:48px;margin:0 0 12px} .booking-box p{font:16px Arial;color:var(--muted);line-height:1.7;max-width:700px;margin:0 auto 25px}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px} .contact-card{border:1px solid var(--line);border-radius:10px;padding:25px;text-align:center;background:#07140e} .contact-card h3{color:var(--gold2);margin:0 0 8px} .contact-card p{font:14px Arial;color:var(--muted);line-height:1.6}
+footer{border-top:1px solid var(--line);padding:35px 18px;text-align:center;background:#030907;color:var(--muted);font:13px Arial} footer strong{color:var(--gold2)}
+@media(max-width:850px){.hero,.about-grid{grid-template-columns:1fr}.services{grid-template-columns:repeat(2,1fr)}.navlinks{display:none}.nav-logo{height:60px}}
+@media(max-width:560px){.services,.contact-grid,.info{grid-template-columns:1fr}.hero{padding-top:35px}h1{font-size:46px}.section-head h2,.about h2{font-size:35px}}
+</style>
+</head>
+<body>
+<div style="text-align:center;padding:28px 16px 10px;"><img src="exclusive-logo.jpg" alt="Exclusive by Yordabarber logo" style="width:min(320px,80vw);height:auto;"></div>
+<div class="topbar">10% OFF YOUR FIRST VISIT • PRIVATE PREMIUM GROOMING EXPERIENCE</div>
+
+<nav><div class="nav-inner">
+  <a href="#top"><img class="nav-logo" src="exclusive-logo.jpg" alt="Exclusive by Yordabarber logo"></a>
+  <div class="navlinks"><a href="#services">Services</a><a href="#experience">Experience</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a></div>
+  <a class="btn" href="https://getsqr.co/yordy-fernandez-1" target="_blank" rel="noopener">Book Now</a>
+</div></nav>
+
+<main id="top">
+<section class="hero">
+  <div>
+    <div class="kicker">Style • Grooming • Exclusivity</div>
+    <h1>Premium grooming.<br>Private experience.</h1>
+    <p>Welcome to <strong>Exclusive by Yordabarber</strong>, a private barber studio in downtown Boston. Every appointment is focused on precision, comfort, personal style and professional results.</p>
+    <div class="hero-actions"><a class="btn" href="https://getsqr.co/yordy-fernandez-1" target="_blank" rel="noopener">Book Your Appointment</a><a class="btn" href="#services">Explore Services</a><a class="btn" href="https://instagram.com/exclusivebyyordabarber" target="_blank" rel="noopener">Instagram</a></div>
+  </div>
+  <div class="hero-panel">
+    <img class="hero-logo" src="exclusive-logo.jpg" alt="Exclusive by Yordabarber">
+    <h2>Your time. Your style. Your experience.</h2>
+    <p>A one-on-one studio environment designed for clients who appreciate detailed grooming without the noise and rush of a traditional barbershop.</p>
+  </div>
+</section>
+
+<div class="info">
+  <div><strong>Private Studio</strong><span>Sola Salons #33<br>Downtown Boston</span></div>
+  <div><strong>Professional Grooming</strong><span>Hair • Beard • Facial<br>Premium finishing</span></div>
+  <div><strong>First Visit</strong><span>Enjoy <b style="color:#f3d27a">10% OFF</b><br>your first appointment</span></div>
+</div>
+
+<section id="services">
+  <div class="section-head"><div class="kicker">Our Services</div><h2>Premium Grooming Services</h2><p>Choose the service that fits your style. Each service includes professional attention to detail and a clean, polished finish.</p></div>
+  <div class="services"><article class="service-card">
+      <img src="01-exclusive-haircut-package.jpg" alt="Exclusive Haircut Package">
+      <div class="service-body">
+        <div class="service-title"><h3>Exclusive Haircut Package</h3><span>$170</span></div>
+        <p>The complete luxury grooming experience: premium haircut, beard service, hair wash, deep facial, hot towel shave, and gold eye pads.</p>
+        <a class="small-btn" href="https://getsqr.co/yordy-fernandez-1" target="_blank" rel="noopener">BOOK THIS SERVICE</a>
+      </div>
+    </article>
+<article class="service-card">
+      <img src="02-premium-haircut-beard.jpg" alt="Premium Haircut & Beard">
+      <div class="service-body">
+        <div class="service-title"><h3>Premium Haircut & Beard</h3><span>$110</span></div>
+        <p>A detailed haircut with a precise fade, beard trim and shaping, hot towel, line-up, styling and professional finishing products.</p>
+        <a class="small-btn" href="https://getsqr.co/yordy-fernandez-1" target="_blank" rel="noopener">BOOK THIS SERVICE</a>
+      </div>
+    </article>
+<article class="service-card">
+      <img src="03-express-haircut-beard.jpg" alt="Express Haircut & Beard">
+      <div class="service-body">
+        <div class="service-title"><h3>Express Haircut & Beard</h3><span>$90</span></div>
+        <p>A clean, sharp haircut with beard trim. Perfect when you want a fresh, polished and professional look.</p>
+        <a class="small-btn" href="https://getsqr.co/yordy-fernandez-1" target="_blank" rel="noopener">BOOK THIS SERVICE</a>
+      </div>
+    </article>
+<article class="service-card">
+      <img src="04-men-scissor-cut.jpg" alt="Men Scissor Cut">
+      <div class="service-body">
+        <div class="service-title"><h3>Men Scissor Cut</h3><span>$65</span></div>
+        <p>A classic or modern scissor cut tailored to your style, including wash, styling and finishing products.</p>
+        <a class="small-btn" href="https://getsqr.co/yordy-fernandez-1" target="_blank" rel="noopener">BOOK THIS SERVICE</a>
+      </div>
+    </article>
+<article class="service-card">
+      <img src="05-loose-the-gray-beard.jpg" alt="Loose the Gray Beard">
+      <div class="service-body">
+        <div class="service-title"><h3>Loose the Gray Beard</h3><span>$40</span></div>
+        <p>Refresh your beard with a natural-looking gray blend for a cleaner, younger and more polished appearance.</p>
+        <a class="small-btn" href="https://getsqr.co/yordy-fernandez-1" target="_blank" rel="noopener">BOOK THIS SERVICE</a>
+      </div>
+    </article>
+<article class="service-card">
+      <img src="06-child-haircut.jpg" alt="Child Haircut">
+      <div class="service-body">
+        <div class="service-title"><h3>Child Haircut</h3><span>$45</span></div>
+        <p>A premium kids haircut with skin fade or your preferred style, including line-up and a clean finishing touch.</p>
+        <a class="small-btn" href="https://getsqr.co/yordy-fernandez-1" target="_blank" rel="noopener">BOOK THIS SERVICE</a>
+      </div>
+    </article>
+<article class="service-card">
+      <img src="07-neck-trim.jpg" alt="Neck Trim">
+      <div class="service-body">
+        <div class="service-title"><h3>Neck Trim</h3><span>$20</span></div>
+        <p>Keep your neckline clean and sharp between full haircuts.</p>
+        <a class="small-btn" href="https://getsqr.co/yordy-fernandez-1" target="_blank" rel="noopener">BOOK THIS SERVICE</a>
+      </div>
+    </article>
+<article class="service-card">
+      <img src="08-single-bleach-process.jpg" alt="Single Hair Process">
+      <div class="service-body">
+        <div class="service-title"><h3>Single Hair Process</h3><span>$45</span></div>
+        <p>Lighten the hair for a fresh, modern look. Ideal for a bold and stylish transformation.</p>
+        <a class="small-btn" href="https://getsqr.co/yordy-fernandez-1" target="_blank" rel="noopener">BOOK THIS SERVICE</a>
+      </div>
+    </article>
+<article class="service-card">
+      <img src="09-express-facial.jpg" alt="Express Facial">
+      <div class="service-body">
+        <div class="service-title"><h3>Express Facial</h3><span>+$30</span></div>
+        <p>Deep cleansing, exfoliation and hydration designed to leave your skin feeling clean, refreshed and smooth.</p>
+        <a class="small-btn" href="https://getsqr.co/yordy-fernandez-1" target="_blank" rel="noopener">BOOK THIS SERVICE</a>
+      </div>
+    </article>
+<article class="service-card">
+      <img src="10-deep-cleansing-facial.jpg" alt="Deep Cleansing Facial">
+      <div class="service-body">
+        <div class="service-title"><h3>Deep Cleansing Facial</h3><span>+$50</span></div>
+        <p>Deep cleansing, extraction of impurities and a purifying mask for clearer, healthier-looking skin.</p>
+        <a class="small-btn" href="https://getsqr.co/yordy-fernandez-1" target="_blank" rel="noopener">BOOK THIS SERVICE</a>
+      </div>
+    </article>
+<article class="service-card">
+      <img src="11-premium-facial-experience.jpg" alt="Premium Facial Experience">
+      <div class="service-body">
+        <div class="service-title"><h3>Premium Facial Experience</h3><span>+$70</span></div>
+        <p>The ultimate facial upgrade: deep cleansing, exfoliation, extraction, premium mask, hot towel and gold eye pads.</p>
+        <a class="small-btn" href="https://getsqr.co/yordy-fernandez-1" target="_blank" rel="noopener">BOOK THIS SERVICE</a>
+      </div>
+    </article></div>
+</section>
+
+<div class="about" id="experience">
+<section>
+  <div class="about-grid">
+    <div>
+      <div class="kicker">The Exclusive Experience</div>
+      <h2>More than a haircut.</h2>
+      <p>Exclusive by Yordabarber was created for clients who want a higher level of grooming and a more personal experience. From the consultation to the final styling, the goal is simple: make you look sharp and leave feeling confident.</p>
+      <div class="feature">
+        <div><strong>01 • Precision</strong><span>Detailed cuts, clean lines and tailored styling.</span></div>
+        <div><strong>02 • Comfort</strong><span>Private studio atmosphere and relaxed appointments.</span></div>
+        <div><strong>03 • Grooming</strong><span>Hair, beard and facial services in one place.</span></div>
+        <div><strong>04 • Finish</strong><span>Professional products and polished finishing touches.</span></div>
+      </div>
+    </div>
+    <div class="booking-box">
+      <div class="kicker">Ready when you are</div>
+      <h2>Book Your Visit</h2>
+      <p>Appointments are available through Squire. Select your service, choose your time and reserve your private grooming experience.</p>
+      <a class="btn" href="https://getsqr.co/yordy-fernandez-1" target="_blank" rel="noopener">Book Now</a>
+    </div>
+  </div>
+</section>
+</div>
+
+
+<section id="reviews">
+  <div class="section-head">
+    <div class="kicker">Client Reviews</div>
+    <h2>Google Reviews</h2>
+    <p>See what clients are saying about their experience at Exclusive by Yordabarber.</p>
+  </div>
+  <div class="booking-box" style="text-align:center">
+    <h2>Love Your Experience?</h2>
+    <p>Read our Google reviews or share your own experience with Exclusive by Yordabarber.</p>
+    <a class="btn" href="https://www.google.com/search?q=Exclusive+by+Yordabarber+Boston" target="_blank" rel="noopener">View Google Reviews</a>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="section-head"><div class="kicker">Visit Exclusive</div><h2>Find Us in Boston</h2><p>Located inside Sola Salons, with a private studio experience designed around you.</p></div>
+  <div class="contact-grid">
+    <div class="contact-card"><h3>Address</h3><p>3 Center Plaza<br>Sola Salons #33<br>Boston, MA 02108</p></div>
+    <div class="contact-card"><h3>Call / Text</h3><p><a href="tel:+16179634806">617-963-4806</a></p></div>
+    <div class="contact-card"><h3>Instagram</h3><p><a href="https://instagram.com/exclusivebyyordabarber" target="_blank">@exclusivebyyordabarber</a></p></div>
+  </div>
+</section>
+
+<section class="booking">
+  <div class="booking-box">
+    <div class="kicker">Exclusive by Yordabarber</div>
+    <h2>Look sharp. Feel exclusive.</h2>
+    <p>Book your next haircut, beard service or facial and experience premium grooming in a private Boston studio.</p>
+    <a class="btn" href="https://getsqr.co/yordy-fernandez-1" target="_blank" rel="noopener">BOOK NOW</a>
+  </div>
+</section>
+</main>
+
+<footer><strong>EXCLUSIVE BY YORDABARBER</strong><br><br>Style • Grooming • Exclusivity<br>3 Center Plaza • Sola Salons #33 • Boston, MA 02108</footer>
+</body>
+</html>
