@@ -226,3 +226,93 @@ Style • Grooming • Exclusivity<br>
 <a href="/privacy.html">Privacy Policy</a> |
 <a href="/terms.html">Terms of Service</a>
 </footer>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
+
+<div id="booking-protection" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:99999;align-items:center;justify-content:center;padding:20px;">
+  <div style="background:#10251d;border:1px solid #c9a45c;border-radius:14px;padding:25px;text-align:center;max-width:360px;width:100%;color:white;">
+    <h2 style="color:#c9a45c;">Verify you're human</h2>
+    <p>Please complete the security check to continue to booking.</p>
+    <div id="turnstile-box"></div>
+    <p id="booking-message" style="font-size:13px;"></p>
+    <button id="booking-cancel" type="button" style="padding:10px 20px;margin-top:10px;">Cancel</button>
+  </div>
+</div>
+
+<script>
+(function () {
+  const BOOKING_URL = "https://getsqr.co/yordy-fernandez-1";
+  const VERIFY_URL = "https://exclusive-booking-protection.exclusivebyyordabarber.workers.dev/verify";
+  const SITE_KEY = "0x4AAAAAAF7o8bYiefnXODVM";
+
+  const modal = document.getElementById("booking-protection");
+  const message = document.getElementById("booking-message");
+  let widgetId = null;
+  let pending = false;
+
+  document.addEventListener("click", function (event) {
+    const link = event.target.closest("a");
+    if (!link || link.href !== BOOKING_URL) return;
+
+    event.preventDefault();
+    modal.style.display = "flex";
+    message.textContent = "Loading security check...";
+
+    if (!window.turnstile) {
+      message.textContent = "Security check is loading. Please try again.";
+      return;
+    }
+
+    if (widgetId === null) {
+      widgetId = turnstile.render("#turnstile-box", {
+        sitekey: SITE_KEY,
+        callback: async function (token) {
+          if (pending) return;
+          pending = true;
+          message.textContent = "Verifying...";
+
+          try {
+            const response = await fetch(VERIFY_URL, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ token: token })
+            });
+            const result = await response.json();
+
+            if (response.ok && result.success === true) {
+              window.location.assign(BOOKING_URL);
+            } else {
+              message.textContent = "Verification failed. Please try again.";
+              turnstile.reset(widgetId);
+              pending = false;
+            }
+          } catch (error) {
+            message.textContent = "Connection error. Please try again.";
+            turnstile.reset(widgetId);
+            pending = false;
+          }
+        },
+        "expired-callback": function () {
+          message.textContent = "Verification expired. Please try again.";
+          pending = false;
+        },
+        "error-callback": function () {
+          message.textContent = "Security check error. Please reload and try again.";
+          pending = false;
+        }
+      });
+      message.textContent = "";
+    } else {
+      turnstile.reset(widgetId);
+      message.textContent = "";
+    }
+  });
+
+  document.getElementById("booking-cancel").addEventListener("click", function () {
+    modal.style.display = "none";
+    pending = false;
+    if (widgetId !== null) turnstile.reset(widgetId);
+  });
+})();
+</script>
+</body>
+</html>
